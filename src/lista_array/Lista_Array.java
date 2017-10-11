@@ -9,6 +9,7 @@ import ConstruirLista.construir_lista;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
 /**
  *
@@ -24,7 +25,17 @@ public class Lista_Array {
         
         construir_lista a=new construir_lista();
         
-        a.llenar_lista(a.getLista());
+        Scanner teclado=new Scanner(System.in);
+        
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Ingrese un objeto, una letra cualquiera, cualquier dato, eres LIBRE!");
+           
+            a.llenar_lista(teclado.next());
+            
+        }
+       try{ 
+      a.ver_lista();
+       }catch(Exception e){}
     }
     
 }

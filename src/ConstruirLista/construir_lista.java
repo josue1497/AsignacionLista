@@ -17,7 +17,7 @@ public class construir_lista {
     List <Object> lista;
 
     public construir_lista() {
-        
+         this.lista=new ArrayList<Object>();
     }
     
     
@@ -35,13 +35,16 @@ public class construir_lista {
         lista.remove(a);
     }
     
-    public void ver_lista(){
+   public void ver_lista(){
+       
         int i = 0;
-        while(!lista.isEmpty()){
+               
+        while(!lista.isEmpty()&&i<=lista.size()){
             System.out.println(lista.get(i)); 
             i++;
         }
-    }
+        }
+    
 
     public List<Object> getLista() {
         return lista;
@@ -49,12 +52,6 @@ public class construir_lista {
 
     public void setLista(List<Object> lista) {
         this.lista = lista;
-    }
-    
-    
-    
-    
-    
-    
+    }  
     
 }
